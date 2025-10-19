@@ -48,7 +48,7 @@
       font-size: 1.5rem;
       font-weight: 700;
       color: #00aaff;
-      letter-spacing: 2px;"><a href="homepage">BLUE LOCK</a></div>
+      letter-spacing: 2px;"><a href="https://aravilalado.github.io/CS3_2ndQTRPortfolio/public/2Q1GBerylliumVillados.html">BLUE LOCK</a></div>
     <div>
       <a href="https://liuz0429.github.io/CS3_2NDQTRPORTFOLIO/public/2Q1GBerylliumCabrera.html" target="_blank">Teams </a>⚽︎
       <a href="https://aravilalado.github.io/CS3_2ndQTRPortfolio/public/2Q1GBerylliumVillados.html" target="_blank">Home </a>⚽︎
@@ -145,10 +145,10 @@
 				<img src="../public/assets/one.jpg" alt="one" style="float: left;">
 			</td>
 			<td>
-				<img src="../public/assets/two.png" alt="two" style="float: center;">
+				<img src="../public/assets/two.png" alt="two" style="float: left;">
 			</td>
 			<td>
-				<img src="../public/assets/three.jpg" alt="three" style="float: right;">
+				<img src="../public/assets/three.jpg" alt="three" style="float: left;">
 			</td>
 		</tr>
 	</table>
@@ -161,15 +161,19 @@
 
 
   <script>
-    //so that nav with still be in the same position when scrolling
     document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+});
     
   </script>
 
