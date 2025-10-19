@@ -46,6 +46,23 @@
       color: #00ccff;
       text-shadow: 0 0 10px #00ccff;
     }
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+a:active {
+  color: orange;
+}
 
 
   
