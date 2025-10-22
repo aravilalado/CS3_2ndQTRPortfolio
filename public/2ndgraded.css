@@ -49,6 +49,17 @@
 
 	.nav-links a:visited {
 		color: #0d343d;
-	}
+
+    header h1 {
+      font-size: 3rem;
+      color: #00ccff;
+      text-shadow: 0 0 20px #00ccff;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #00ccff; }
+      to { text-shadow: 0 0 20px #00ffff, 0 0 35px #00ccff; }
+    }
+
 
   
