@@ -10,10 +10,14 @@
       color: #fff;
       overflow-x: hidden;
     }
-    a { text-decoration: none; color: inherit; }
-    img { max-width: 100%; display: block; }
+    a { 
+		text-decoration: none; color: inherit; 
+	}
+    img {
+		max-width: 100%; display: block; 
+	}
 
- .subheader {
+ 	.subheader {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 2rem;
