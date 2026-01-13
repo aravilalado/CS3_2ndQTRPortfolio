@@ -2,7 +2,89 @@
 <html>
   <head>
     <title>heh</title>
-    <link rel="stylesheet" href="styles.css" />
+    <style>/* Page background */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Form card */
+form {
+  background: #ffffff;
+  padding: 30px 35px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Inputs, selects, textarea */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #ccc;
+  font-size: 14px;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+
+/* Radio buttons spacing */
+input[type="radio"] {
+  width: auto;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+/* Buttons */
+button,
+input[type="reset"] {
+  margin-top: 18px;
+  padding: 12px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Submit button */
+button {
+  background: linear-gradient(135deg, #2c5364, #203a43);
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+input[type="reset"] {
+  background: #e0e0e0;
+  color: #333;
+}
+
+input[type="reset"]:hover {
+  background: #d4d4d4;
+}
+
+</style>
   </head>
   <body style="font-family:Arial, Helvetica, sans-serif;">
       <form action="/submit" method="post">
