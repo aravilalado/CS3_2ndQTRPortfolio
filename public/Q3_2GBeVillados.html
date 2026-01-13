@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body style="font-family:Arial, Helvetica, sans-serif;">
+      <form action="/submit" method="post">
+        <label for="IDstudent">StudentID:</label>
+        <input type="quantity" id="IDstudent" name="IDstudent" required>
+    <br />
+        <label for="FullName">Full Name:</label>
+        <input type="text" id="FullName" name="FullName">
+    <br />
+        <label for="Birthday">Birthday:</label>
+        <input type="date" id="Birthday" name="Birthday" required>
+    <br />
+        <label for="email">Email address:</label>
+        <input type="email" id="email" name="email" required placeholder="user@pshs.edu.ph">
+    <br />
+        <label for="FullName">Mobile Number</label>
+        <input type="text" id="MobileNum" name="MobileNum" required>
+    <br />
+         <label for="level">Grade Level:</label>
+         <select name="level" id="level" required>
+            <option value="">-- Select --</option> 
+            <option value="">Grade 1</option> 
+            <option value="">Grade 2</option> 
+            <option value="">Grade 3</option> 
+            <option value="">Grade 4</option> 
+            <option value="">Grade 5</option> 
+            <option value="">Grade 6</option> 
+            <option value="">Grade 7</option> 
+            <option value="">Grade 8</option> 
+            <option value="">Grade 9</option> 
+            <option value="">Grade 10</option> 
+            <option value="">Grade 11</option> 
+            <option value="">Grade 12</option> 
+        </select>
+    <br />
+        Intern/Extern :
+        Intern
+        <input type="radio" name="yey" value="intern">
+        Extern
+        <input type="radio"name="yey" value="extern">
+    <br />
+        <label for="level">Preferred Organization / Club :</label>
+         <select name="level" id="level" required>
+            <option value="">-- Select --</option> 
+            <option value="">SARS +</option> 
+            <option value="">SOLACE</option> 
+            <option value="">INVICTUS</option> 
+            <option value="">MUN</option> 
+            <option value="">PHS</option> 
+            <option value="">ASTROSOC</option> 
+    <br />
+        <label for="why">Why do you want to join?</label>
+        <textarea name="why" id="why" required></textarea>
+    <br />
+        <button type="submit">Submit</button>
+    <br />
+         <input type="reset" value=" Clear ">
+    <br />
+      </form>
+  </body>
+</html>
