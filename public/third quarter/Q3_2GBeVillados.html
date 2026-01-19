@@ -1,148 +1,186 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>heh</title>
-    <style>/* Page background */
-body {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+<head>
+  <title>heh</title>
 
-/* Form card */
-form {
-  background: #ffffff;
-  padding: 30px 35px;
-  border-radius: 14px;
-  width: 100%;
-  max-width: 420px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-}
+  <style>
+    /* Page background */
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-/* Labels */
-label {
-  font-weight: 600;
-  display: block;
-  margin-top: 15px;
-  margin-bottom: 6px;
-  color: #333;
-}
+    /* Form card */
+    form {
+      background: #ffffff;
+      padding: 30px 35px;
+      border-radius: 14px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    }
 
-/* Inputs, selects, textarea */
-input,
-select,
-textarea {
-  width: 100%;
-  padding: 10px 12px;
-  border-radius: 8px;
-  border: 1.5px solid #ccc;
-  font-size: 14px;
-  transition: border 0.3s, box-shadow 0.3s;
-}
+    label {
+      font-weight: 600;
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 6px;
+      color: #333;
+    }
 
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1.5px solid #ccc;
+      font-size: 14px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
 
-/* Radio buttons spacing */
-input[type="radio"] {
-  width: auto;
-  margin-left: 10px;
-  margin-right: 5px;
-}
+    /* Focus pseudo-class */
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #2c5364;
+      box-shadow: 0 0 6px rgba(44, 83, 100, 0.6);
+    }
 
-/* Buttons */
-button,
-input[type="reset"] {
-  margin-top: 18px;
-  padding: 12px;
-  width: 100%;
-  border-radius: 10px;
-  border: none;
-  font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
+    /* Error style for empty fields */
+    .error {
+      border-color: #d9534f !important;
+      background-color: #fff0f0;
+    }
 
-/* Submit button */
-button {
-  background: linear-gradient(135deg, #2c5364, #203a43);
-  color: white;
-}
+    /* Radio buttons */
+    .radio-group input {
+      width: auto;
+      margin-right: 5px;
+    }
 
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-}
+    button,
+    input[type="reset"] {
+      margin-top: 18px;
+      padding: 12px;
+      width: 100%;
+      border-radius: 10px;
+      border: none;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+    }
 
-input[type="reset"] {
-  background: #e0e0e0;
-  color: #333;
-}
+    button {
+      background: linear-gradient(135deg, #2c5364, #203a43);
+      color: white;
+    }
 
-input[type="reset"]:hover {
-  background: #d4d4d4;
-}
+    input[type="reset"] {
+      background: #e0e0e0;
+      color: #333;
+    }
+  </style>
+</head>
 
-</style>
-  </head>
-  <body style="font-family:Arial, Helvetica, sans-serif;">
-      <form action="/submit" method="post">
-        <label for="IDstudent">StudentID:</label>
-        <input type="quantity" id="IDstudent" name="IDstudent" required>
-    <br />
-        <label for="FullName">Full Name:</label>
-        <input type="text" id="FullName" name="FullName">
-    <br />
-        <label for="Birthday">Birthday:</label>
-        <input type="date" id="Birthday" name="Birthday" required>
-    <br />
-        <label for="email">Email address:</label>
-        <input type="email" id="email" name="email" required placeholder="user@pshs.edu.ph">
-    <br />
-        <label for="FullName">Mobile Number</label>
-        <input type="text" id="MobileNum" name="MobileNum" required>
-    <br />
-         <label for="level">Grade Level:</label>
-         <select name="level" id="level" required>
-            <option value="">-- Select --</option> 
-            <option value="">Grade 1</option> 
-            <option value="">Grade 2</option> 
-            <option value="">Grade 3</option> 
-            <option value="">Grade 4</option> 
-            <option value="">Grade 5</option> 
-            <option value="">Grade 6</option> 
-            <option value="">Grade 7</option> 
-            <option value="">Grade 8</option> 
-            <option value="">Grade 9</option> 
-            <option value="">Grade 10</option> 
-            <option value="">Grade 11</option> 
-            <option value="">Grade 12</option> 
-        </select>
-    <br />
-        Intern/Extern :
-        Intern
-        <input type="radio" name="yey" value="intern">
-        Extern
-        <input type="radio"name="yey" value="extern">
-    <br />
-        <label for="level">Preferred Organization / Club :</label>
-         <select name="level" id="level" required>
-            <option value="">-- Select --</option> 
-            <option value="">SARS +</option> 
-            <option value="">SOLACE</option> 
-            <option value="">INVICTUS</option> 
-            <option value="">MUN</option> 
-            <option value="">PHS</option> 
-            <option value="">ASTROSOC</option> </select>
-    <br />
-        <label for="why">Why do you want to join?</label>
-        <textarea name="why" id="why" required></textarea>
-    <br />
-        <button type="submit">Submit</button>
-    <br />
-         <input type="reset" value=" Clear ">
-    <br />
-      </form>
-  </body>
-</html>
+<body>
+  <form method="post" action="submit" onsubmit="return confirmSubmit()" onreset="return confirmReset()">
+
+    <label>
+      Student ID:
+      <input type="text" name="IDstudent" required onblur="checkEmpty(this)">
+    </label>
+
+    <label>
+      Full Name:
+      <input type="text" name="FullName" required onblur="checkEmpty(this)">
+    </label>
+
+    <label>
+      Birthday:
+      <input type="date" name="Birthday" required onblur="checkEmpty(this)">
+    </label>
+
+    <label>
+      Email Address:
+      <input type="email" name="email" required placeholder="user@pshs.edu.ph" onblur="checkEmpty(this)">
+    </label>
+
+    <label>
+      Mobile Number:
+      <input type="text" name="MobileNum" required onblur="checkEmpty(this)">
+    </label>
+
+    <label>
+      Grade Level:
+      <select name="gradeLevel" required onblur="checkEmpty(this)">
+        <option value="">-- Select --</option>
+        <option>Grade 1</option>
+        <option>Grade 2</option>
+        <option>Grade 3</option>
+        <option>Grade 4</option>
+        <option>Grade 5</option>
+        <option>Grade 6</option>
+        <option>Grade 7</option>
+        <option>Grade 8</option>
+        <option>Grade 9</option>
+        <option>Grade 10</option>
+        <option>Grade 11</option>
+        <option>Grade 12</option>
+      </select>
+    </label>
+
+    <label>
+      Intern / Extern:
+      <div class="radio-group">
+        <input type="radio" name="status" value="Intern" required> Intern
+        <input type="radio" name="status" value="Extern"> Extern
+      </div>
+    </label>
+
+    <label>
+      Preferred Organization / Club:
+      <select name="club" required onblur="checkEmpty(this)">
+        <option value="">-- Select --</option>
+        <option>SARS +</option>
+        <option>SOLACE</option>
+        <option>INVICTUS</option>
+        <option>MUN</option>
+        <option>PHS</option>
+        <option>ASTROSOC</option>
+      </select>
+    </label>
+
+    <label>
+      Why do you want to join?
+      <textarea name="why" required onblur="checkEmpty(this)"></textarea>
+    </label>
+
+    <button type="submit">Submit</button>
+    <input type="reset" value="Clear">
+
+  </form>
+</body>
+    <script>
+    function confirmSubmit() {
+      return confirm("Are you sure you want to submit this form?");
+    }
+
+    function confirmReset() {
+      return confirm("Are you sure you want to clear all inputs?");
+    }
+
+    function checkEmpty(el) {
+      if (el.value.trim() === "") {
+        el.classList.add("error");
+      } else {
+        el.classList.remove("error");
+      }
+    }
+    </script>
+</html></html>
